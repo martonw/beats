@@ -1,0 +1,18 @@
+- key: test
+  title: Test fields.yml
+  fields:
+    - name: group_disabled
+      type: group
+      enabled: false
+      fields:
+        - name: message
+          type: text
+
+    - name: long
+      type: long 
+
+    - name: multifield_field
+      type: text
+      multi_fields:
+        - name: keyword
+          type: keyword
