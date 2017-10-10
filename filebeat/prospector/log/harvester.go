@@ -124,6 +124,8 @@ func (h *Harvester) open() error {
 		return h.openStdin()
 	case harvester.LogType:
 		return h.openFile()
+	case harvester.PipeType:
+		return h.openPipe()
 	default:
 		return fmt.Errorf("Invalid harvester type: %+v", h.config)
 	}
